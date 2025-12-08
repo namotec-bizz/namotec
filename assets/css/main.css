@@ -28576,3 +28576,9 @@ a.ui-button:active {
       left: 20px;
 }
 }
+
+
+.footer-text{
+  color: #b94605 !important;
+  font-weight: bold !important;
+}
