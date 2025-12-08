@@ -28570,4 +28570,9 @@ a.ui-button:active {
   .rs-subscribe-logo img{
   right: 0px !important;
 }
+.sticky-logo img{
+    position: relative;
+    
+      left: 20px;
+}
 }
