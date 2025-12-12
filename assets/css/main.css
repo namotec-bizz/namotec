@@ -3181,19 +3181,19 @@ textarea:focus {
 /*  2.6 Breadcrumb
 /*----------------------------------------*/
 .rs-breadcrumb-one {
-  padding-top: 170px;
-  padding-bottom: 170px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 1199px) {
   .rs-breadcrumb-one {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 @media only screen and (max-width: 767px) {
   .rs-breadcrumb-one {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .rs-breadcrumb-one .rs-breadcrumb-bg.bg-black {
@@ -22928,7 +22928,7 @@ html.lenis body {
 }
 .rs-contact-six .rs-contact-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   position: relative;
   z-index: 1;
   gap: 30px 80px;
@@ -22960,9 +22960,10 @@ html.lenis body {
   z-index: -1;
 }
 .rs-contact-six .rs-contact-item {
+  background: #f6f6f6;
   border-radius: 4px 4px 4px 4px;
   padding-top: 40px;
-  padding-bottom: 300px;
+  padding-bottom: 40px;
   padding-inline-start: 40px;
   padding-inline-end: 40px;
   position: relative;
@@ -22973,7 +22974,7 @@ html.lenis body {
 @media only screen and (max-width: 1600px) {
   .rs-contact-six .rs-contact-item {
     padding-top: 30px;
-    padding-bottom: 250px;
+    padding-bottom: 50px;
     padding-inline-start: 30px;
     padding-inline-end: 30px;
   }
@@ -22982,6 +22983,7 @@ html.lenis body {
   border-color: var(--rs-theme-orange);
 }
 .rs-contact-six .rs-contact-title {
+  color: var(--rs-theme-orange);
   font-size: 30px;
 }
 @media only screen and (max-width: 1366px) {
@@ -23046,7 +23048,7 @@ html.lenis body {
 }
 .rs-contact-seven .rs-contact-form .descrip {
   margin: 15px auto 30px;
-  max-width: 630px;
+  max-width: 650px;
 }
 .rs-contact-seven .rs-contact-title {
   font-size: 40px;
