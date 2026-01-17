@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.product-card {
+  background: #fff;
+  border: 4px solid #143a8f;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* BADGES */
+.brand-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #143a8f;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f4a000;
+  color: #000;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* IMAGE */
+.product-image img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.product-name {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.product-short {
+  font-size: 14px;
+  color: #555;
+}
+
+/* MODAL */
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.product-modal.active {
+  display: flex;
+}
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 16px;
+  padding: 30px;
+}
+.modal-close {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.modal-image img {
+  width: 100%;
+}
+.modal-brand {
+  color: #143a8f;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.modal-details ul {
+  padding-left: 18px;
+}</style>
+</head>
+<body>
+    <section class="namotec-products">
+  <h2 class="section-title">3D & Wax Printing Machines</h2>
+
+  <div class="product-grid">
+
+    <!-- PRODUCT CARD -->
+    <div class="product-card"
+         onclick="openProductModal('alpha16k')">
+
+      <span class="brand-badge">NAMO TEC</span>
+      <span class="category-badge">3D Resin Printer</span>
+
+      <div class="product-image">
+        <img src="assets/images/products/alpha-16k.png" alt="Alpha 16K Resin Printer">
+      </div>
+
+      <h4 class="product-name">Alpha 16K Resin Printer</h4>
+      <p class="product-short">
+        Ultra-high resolution resin printer for jewellery prototyping.
+      </p>
+    </div>
+
+    <!-- PRODUCT CARD -->
+    <div class="product-card"
+         onclick="openProductModal('waxjet510')">
+
+      <span class="brand-badge">NAMO TEC</span>
+      <span class="category-badge">Wax Printer</span>
+
+      <div class="product-image">
+        <img src="assets/images/products/waxjet-510.png" alt="WaxJet 510">
+      </div>
+
+      <h4 class="product-name">WaxJet 510</h4>
+      <p class="product-short">
+        High-precision wax printer for direct casting models.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<div id="productModal" class="product-modal">
+  <div class="modal-content">
+
+    <span class="modal-close" onclick="closeProductModal()">×</span>
+
+    <div class="modal-body">
+      <div class="modal-image">
+        <img id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-details">
+        <span class="modal-brand">NAMO TEC</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+
+        <ul id="modalSpecs"></ul>
+
+        <button class="rs-btn has-theme-orange">
+          Enquire Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+const productData = {
+  alpha16k: {
+    title: "Alpha 16K Resin Printer",
+    image: "assets/images/products/alpha-16k.png",
+    description: "Ultra-high resolution LCD resin printer designed for precision jewellery prototyping and casting masters.",
+    specs: [
+      "16K Ultra HD Mono LCD",
+      "Print Size: 223 × 126 × 200 mm",
+      "Layer Thickness: 0.01 – 0.2 mm",
+      "Supports Castable & Jewellery Resin",
+      "Ideal for Gold & Silver Jewellery"
+    ]
+  },
+
+  waxjet510: {
+    title: "WaxJet 510",
+    image: "assets/images/products/waxjet-510.png",
+    description: "Professional wax jet printer for direct wax model printing with smooth surface and high casting success.",
+    specs: [
+      "Direct Wax Printing Technology",
+      "No Resin / No Post Curing",
+      "High Accuracy Jewellery Wax Models",
+      "Optimized for Mass Production Casting"
+    ]
+  }
+};
+
+function openProductModal(id) {
+  const product = productData[id];
+
+  document.getElementById("modalTitle").innerText = product.title;
+  document.getElementById("modalDescription").innerText = product.description;
+  document.getElementById("modalImage").src = product.image;
+
+  const specsList = document.getElementById("modalSpecs");
+  specsList.innerHTML = "";
+  product.specs.forEach(spec => {
+    const li = document.createElement("li");
+    li.innerText = spec;
+    specsList.appendChild(li);
+  });
+
+  document.getElementById("productModal").classList.add("active");
+}
+
+function closeProductModal() {
+  document.getElementById("productModal").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
