@@ -5875,7 +5875,7 @@ html.lenis body {
   border: 2px solid var(--rs-theme-blue);
   color: var(--rs-theme-blue);
   border-radius: 50%;
-  width: 20px;
+  width: 30px;
   height: 20px;
   font-size: 12px;
   display: flex;
@@ -14766,17 +14766,17 @@ html.lenis body {
   content: "";
   inset-inline-start: -1px;
   top: 0;
-  background-color: var(--rs-theme-deep-blue);
+  background-color: var(--rs-theme-orange);
   border-radius: 2px 2px 0 0;
 }
 .rs-about-eleven .rs-about-tab .nav-link.active {
-  color: var(--rs-theme-deep-blue);
+  color: var(--rs-theme-orange);
 }
 .rs-about-eleven .rs-about-tab .nav-link.active::after {
   transform: scaleX(1);
 }
 .rs-about-eleven .rs-about-tab .nav-link:hover {
-  color: var(--rs-theme-deep-blue);
+  color: var(--rs-theme-orange);
 }
 .rs-about-eleven .rs-about-tab .nav-link:hover::after {
   transform: scaleX(1);
@@ -21127,6 +21127,7 @@ html.lenis body {
 }
 
 .rs-portfolio-four .rs-portfolio-thumb {
+  border: 3px solid var(--rs-theme-orange);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -21151,6 +21152,7 @@ html.lenis body {
   }
 }
 .rs-portfolio-four .rs-portfolio-title {
+  color: var(--rs-theme-orange);
   font-size: 30px;
   margin-bottom: 10px;
 }
