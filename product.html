@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/vendor/spacing.css">
   <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
   <link rel="stylesheet" href="assets/css/main.css">
- 
+
 </head>
 
 <body class="rs-smoother-yes rtl">
@@ -455,7 +455,7 @@
       <h4>${p.name}</h4>
     `;
         card.onclick = () => openModal(p);
-        grid.appendChild(card);       
+        grid.appendChild(card);
       });
 
       gsap.to(".product-card", {
@@ -508,37 +508,69 @@
       });
     }
 
+
+    function formatValue(value) {
+      // Array → bullet list
+      if (Array.isArray(value)) {
+        return `
+      <ul>
+        ${value.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    `;
+      }
+
+      // Object → key-value list
+      if (typeof value === "object" && value !== null) {
+        return `
+      <ul>
+        ${Object.entries(value)
+            .map(([k, v]) => `<li><strong>${formatKey(k)}:</strong> ${v}</li>`)
+            .join("")}
+      </ul>
+    `;
+      }
+
+      // String / number
+      return value;
+    }
+
     /* ================= MODAL ================= */
     function openModal(product) {
-      document.body.classList.add("modal-open");
+  document.body.classList.add("modal-open");
 
-      modalImage.src = product.image;
-      modalName.innerText = product.name;
-      modalDesc.innerText = product.description || "High-quality industrial jewellery equipment.";
+  modalImage.src = product.image;
+  modalName.innerText = product.name;
+  modalDesc.innerText =
+    product.description || "High-quality industrial jewellery equipment.";
 
-      const tbody = document.querySelector("#specTable tbody");
-      tbody.innerHTML = "";
+  const tbody = document.querySelector("#specTable tbody");
+  tbody.innerHTML = "";
 
-      Object.entries(product).forEach(([k, v]) => {
-        if (["id", "name", "image", "description"].includes(k)) return;
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td><strong>${formatKey(k)}</strong></td><td>${Array.isArray(v) ? v.join(", ") : typeof v === "object" ? JSON.stringify(v) : v}</td>`;
-        tbody.appendChild(tr);
-      });
+  Object.entries(product).forEach(([k, v]) => {
+    if (["id", "name", "image", "description"].includes(k)) return;
 
-      productModal.style.display = "block";
-      productModal.classList.add("active");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><strong>${formatKey(k)}</strong></td>
+      <td>${formatValue(v)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
 
-      gsap.fromTo(".modal-content",
-        { scale: 0.85, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
-      );
+  productModal.style.display = "block";
+  productModal.classList.add("active");
+
+  gsap.fromTo(
+    ".modal-content",
+    { scale: 0.85, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
+  );
 
       gsap.to("#specTable tr", { opacity: 1, x: 0, stagger: 0.05, duration: 0.4, delay: 0.2 });
- /* ================= WHATSAPP MESSAGE ================= */
-    const phoneNumber = "9224463404"; // 🔴 CHANGE to your WhatsApp number
+      /* ================= WHATSAPP MESSAGE ================= */
+      const phoneNumber = "9224463404"; // 🔴 CHANGE to your WhatsApp number
 
-    const message = `
+      const message = `
 Hello NAMOTEC Team,
 
 I am interested in the following product -
@@ -551,10 +583,10 @@ Please share more details, pricing, and availability.
 Thank you.
 `.trim();
 
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    document.getElementById("whatsappBtn").href = whatsappURL;
-      
+      document.getElementById("whatsappBtn").href = whatsappURL;
+
     }
 
     function closeModal() {

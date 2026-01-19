@@ -3254,7 +3254,7 @@ only screen and (max-width: 575px) {
 }
 
 .offcanvas-logo a img {
-  width: 180px;
+  width: 250px;
 }
 
 .offcanvas-content {
@@ -3269,7 +3269,7 @@ only screen and (max-width: 575px) {
 
 @media only screen and (max-width: 575px) {
   .offcanvas-wrapper {
-    padding: 30px 30px;
+    padding: 30px 10px;
   }
 }
 
@@ -33787,9 +33787,11 @@ body.modal-open {
 }
 
 /* ================= SPEC TABLE ================= */
+
 #specTable {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* 🔴 VERY IMPORTANT */
 }
 
 #specTable tr:nth-child(even) {
@@ -33803,7 +33805,24 @@ body.modal-open {
 #specTable td {
   border: 1px solid #ddd;
   padding: 10px;
+  vertical-align: top;
+
+  /* 🔴 FORCE WRAPPING */
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
+
+#specTable ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#specTable li {
+  line-height: 1.4;
+}
+
+
 
 
 /* ================= MOBILE STACK ================= */
@@ -33847,6 +33866,10 @@ body.modal-open {
 
   .modal-info h2 {
     font-size: 24px;
+  }
+
+  #specTable td {
+    font-size: 14px;
   }
 }
 
