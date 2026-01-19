@@ -48,8 +48,7 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Products</a></li>
-                <li> <a href="#">DS Namo Tec</a> </li>
+                <li><a href="product.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </nav>
@@ -86,8 +85,7 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Products</a></li>
-                <li> <a href="#">DS Namo Tec</a> </li>
+                <li><a href="product.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </nav>
@@ -118,7 +116,7 @@
         <div class="offcanvas-content">
           <div class="offcanvas-top d-flex justify-content-between align-items-center mb-20">
             <div class="offcanvas-logo">
-              <a class="logo-black" href="index.html"><img src="assets/images/namotec_img/W_namotec logo.png"
+              <a class="logo-black" href="index.html"><img src="assets/images/namotec_img/W_namotec_logo.png"
                   alt="logo"></a>
             </div>
             <div class="offcanvas-close">
@@ -325,8 +323,7 @@
                       <ul>
                         <li> <a href="index.html">Home</a> </li>
                         <li> <a href="about.html">About Us</a> </li>
-                        <li> <a href="#">Products</a> </li>
-                        <li> <a href="#">DS Namo Tec</a> </li>
+                        <li> <a href="product.html">Products</a> </li>
                         <li><a href="contact.html">Contact Us</a></li>
                       </ul>
                     </div>
@@ -458,28 +455,7 @@
       <h4>${p.name}</h4>
     `;
         card.onclick = () => openModal(p);
-        grid.appendChild(card);
-
-
-        /* ================= WHATSAPP MESSAGE ================= */
-    const phoneNumber = "9224463404"; // 🔴 CHANGE to your WhatsApp number
-
-    const message = `
-Hello NAMOTEC Team,
-
-I am interested in the following product:
-
-Product Name: ${p.name}
-Category: ${p.category}
-
-Please share more details, pricing, and availability.
-
-Thank you.
-`.trim();
-
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    document.getElementById("whatsappBtn").href = whatsappURL;
+        grid.appendChild(card);       
       });
 
       gsap.to(".product-card", {
@@ -559,6 +535,26 @@ Thank you.
       );
 
       gsap.to("#specTable tr", { opacity: 1, x: 0, stagger: 0.05, duration: 0.4, delay: 0.2 });
+ /* ================= WHATSAPP MESSAGE ================= */
+    const phoneNumber = "9224463404"; // 🔴 CHANGE to your WhatsApp number
+
+    const message = `
+Hello NAMOTEC Team,
+
+I am interested in the following product -
+
+Product Name: *${product.name}*
+Category: ${product.category}
+
+Please share more details, pricing, and availability.
+
+Thank you.
+`.trim();
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    document.getElementById("whatsappBtn").href = whatsappURL;
+      
     }
 
     function closeModal() {
