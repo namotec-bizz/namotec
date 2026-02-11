@@ -1,13 +1,13 @@
 const namotecProducts = [
 
   /* ================================
-     3D & WAX PRINTING MACHINES
+     MJP MACHINES
   ================================ */
 
   {
-    id: "mjp-industrial-wax-printer",
-    name: "MJP Industrial Wax Printer",
-    category: "3D & Wax Printing Machines",
+    id: "zczb-singlehead-wax-printer",
+    name: "Zczb Single-Head Wax Printer",
+    category: "MJP Machines",
     image: "assets/images/namotec_img/product/MJP_wx.jpg",
     printingTechnology: "MJP",
     printingArea: "400 × 200 × 144 mm",
@@ -31,10 +31,40 @@ const namotecProducts = [
     ]
   },
 
+{
+  id: "3d-matrix-elite-7s",
+  name: "3D Matrix Elite 7S",
+  category: "MJP Machines",
+  image: "assets/images/namotec_img/product/elite_7s.jpg",
+  printingTechnology: "MJP (Multi Jet Printing)",
+  printingArea: "300 × 200 × 150 mm",
+  resolution: "High Definition 1200 DPI (16µ layer thickness)",
+  accuracy: "±0.02–0.04 mm",
+  powerSupply: "AC 220–240V, 50/60Hz, 2.5KW",
+  machineSize: "1200 × 750 × 1100 mm",
+  netWeight: "350 kg",
+  grossWeight: "450 kg",
+  software: "3D Matrix Print Manager",
+  fileFormats: [".stl", ".slc", ".obj"],
+  materials: {
+    buildMaterial: "High Precision Wax Material (1.2 kg cartridge)",
+    supportMaterial: "Removable Support Wax (1.3 kg cartridge)"
+  },
+  operatingSystem: "Windows 10 / Windows 11 (64-bit)",
+  environment: "20–28°C, 40–70% humidity",
+  application: [
+    "Jewellery master patterns",
+    "Investment casting",
+    "Dental casting patterns",
+    "Precision industrial prototypes"
+  ]
+},
+
+
   {
-    id: "wukong-mjp-printer",
-    name: "WUKONG MJP Printer",
-    category: "3D & Wax Printing Machines",
+    id: "zczb-triplehead-wax-printer",
+    name: "Zczb Triple-Head Wax Printer",
+    category: "MJP Machines",
     image: "assets/images/namotec_img/product/WukongMJPPrinter.jpg",
     printingTechnology: "MJP",
     printingSize: "400 × 210 × 150 mm",
@@ -61,11 +91,57 @@ const namotecProducts = [
     ]
   },
 
+
+ /* ================================
+     LCD MACHINES
+  ================================ */
+
+{
+  id: "gk3-alpha-series",
+  name: "GK3 Alpha Series",
+  category: "LCD Printers",
+  image: "assets/images/namotec_img/product/GK3_series.jpg",
+  models: "GK3 (T) 405 / GK3 (B) 405 / GK3 Pro 385",
+  printingTechnology: "LCD (Masked Stereolithography)",
+  buildVolume: "211 × 118 × 240 mm",
+  exposureSpeed: "1.5–2.5 sec per layer (0.05 mm)",
+  lcdResolution: "15120 × 6230 (16K)",
+  xyResolution: "14 × 19 µm",
+  zAxisAccuracy: "±0.05 mm",
+  layerThickness: "0.03 / 0.05 / 0.1 mm",
+  uvWavelength: "405 nm (GK3 T/B) / 385 nm (GK3 Pro)",
+  lcdScreen: "16K Ordinary Screen (T/B) / 16K High-Transparency Screen (Pro)",
+  uvEnergy: "4600–5200 µW/cm² (T/B) / 4200–4800 µW/cm² (Pro)",
+  zAxisLeadScrew: "T-Type Screw (GK3 T) / Ball Screw (GK3 B & Pro)",
+  releaseFilm: "NFEP (T/B) / C-PFA ACF Optimized (Pro)",
+  releaseFilmLifespan: "80,000 layers (T/B) / 40,000 layers (Pro)",
+  fileFormats: [".stl", ".obj"],
+  fileTransfer: "USB, WiFi, Wired Network",
+  software: "UniFormation Slicer / Chitubox / Lychee Slicer",
+  resinCartridgeCapacity: "1.2 kg",
+  resinVatCapacity: "800 ml (approx. 900 g)",
+  automaticFeeding: "Yes",
+  automaticHeating: "25°C / 30°C",
+  camera: "720P, 2 Megapixels",
+  ratedVoltage: "100–240V",
+  ratedPower: "Printing 130W, Heating 120W",
+  machineSize: "392 × 332 × 520 mm",
+  packageSize: "500 × 440 × 660 mm",
+  grossWeight: "24 kg",
+  operatingSystem: "Windows 7 (64-bit) / iOS 10.1 or above",
+  application: [
+    "Jewellery resin models",
+    "High-detail prototypes",
+    "Dental models",
+    "Miniatures and precision parts"
+  ]
+},
+
   {
-    id: "alpha-14k-16k",
-    name: "ALPHA 14K / 16K Resin Printer",
-    category: "3D & Wax Printing Machines",
-    image: "assets/images/namotec_img/product/Alpha16KResinPrinter.png",
+    id: "piocreate-printers",
+    name: "PioCreate LCD Printer",
+    category: "LCD Printers",
+    image: "assets/images/namotec_img/product/piocreat.png",
     printingTechnology: "LCD Resin",
     display: "10.1” Ultra HD Mono LCD",
     resolution: "13320 × 5120",
@@ -88,97 +164,49 @@ const namotecProducts = [
   },
 
   {
-    id: "dlp-dm-series",
-    name: "DLP-DM200 / DLP-DM300 / DLP-DM400",
-    category: "3D & Wax Printing Machines",
-    image: "assets/images/namotec_img/product/DLP-series.png",
-    printingTechnology: "DLP",
-    printingSizes: [
-      "192 × 108 × 120 mm",
-      "288 × 162 × 300 mm",
-      "384 × 216 × 330 mm"
-    ],
-    xyResolution: ["50 µm", "75 µm", "100 µm"],
-    layerThickness: "0.03 – 0.15 mm",
-    lightSource: "4K 405nm",
-    software: "Voxel Dance Tango",
-    fileFormats: ["igs", "stl", "step"],
-    operatingSystem: "Zongheng Embedded System",
-    applications: [
-      "Mass jewellery production",
-      "High-speed casting models"
-    ]
-  },
+  id: "halot-x1-16k",
+  name: "HALOT-X1 16K",
+  category: "LCD Printers",
+  image: "assets/images/namotec_img/product/halot-x1.jpg",
 
-  {
-    id: "melt-m1-m3",
-    name: "Melt M1 & M3 Wax Printer",
-    category: "3D & Wax Printing Machines",
-    image: "assets/images/namotec_img/product/Melt-M1-M3.jpg",
-    printingTechnology: "Multi-Jet Wax Printing",
-    buildArea: "285 × 218 × 100 mm",
-    resolution: "1200 × 1200 × 1600 DPI",
-    layerHeight: "16 µm",
-    printerHead: "Xerox High Temperature Series",
-    printSpeed: "6.3 / 4.2 / 2.1 mm per hour",
-    dimensions: "1390 × 815 × 1500 mm",
-    connection: ["USB", "LAN"],
-    features: [
-      "Fully automatic system",
-      "Adaptive speed control",
-      "High density packing"
-    ],
-    application: [
-      "Gold & silver investment casting",
-      "Multi-material wax models"
-    ]
-  },
+  printingTechnology: "LCD",
+  lightSource: "Honeycomb Matrix Light Source",
+  exposureIntensity: "6500 ±10% µW/cm²",
+  resolution: "16K (15120 × 6230 px)",
+  pixelSize: "14 × 19 µm",
+  zAxisAccuracy: "0.01 mm",
+  layerThickness: "0.01–0.2 mm",
+  printingSpeed: "Max. 170 mm/h",
 
-  {
-    id: "waxjet-510",
-    name: "WaxJet 510",
-    category: "3D & Wax Printing Machines",
-    image: "assets/images/namotec_img/product/waxJet510.jpg",
-    printingTechnology: "MJP Wax Jet",
-    application: [
-      "K-Gold wax mould casting",
-      "High-precision jewellery wax printing"
-    ],
-    keyBenefits: [
-      "Smooth wax surface",
-      "Minimal wax waste",
-      "High efficiency"
-    ]
-  },
+  buildVolume: "211.68 × 118.37 × 200 mm",
+  productDimensions: "344 × 331 × 434 mm",
+  packageDimensions: "430 × 420 × 535 mm",
+  netWeight: "12.75 kg",
+  grossWeight: "16.01 kg",
 
-  /* ================================
-     LASER MACHINES
+  touchScreen: "3.98-inch Capacitive Touch Screen",
+  software: "HALOT BOX / Chitubox",
+  dataTransmission: "USB / WiFi",
+  inputVoltage: "100–120V / 200–240V, 50–60Hz",
+  power: "350W",
+
+  fileFormats: [".stl", ".obj"],
+  application: [
+    "Jewellery resin models",
+    "High-detail prototypes",
+    "Miniatures",
+    "Dental models"
+  ]
+},
+
+ /* ================================
+    ENGRAVING & WELDING MACHINES
   ================================ */
-
-  {
-    id: "portable-laser-welder",
-    name: "Portable Jewellery Laser Welding Machine",
-    category: "Laser Cutting & Welding Machines",
-    image: "assets/images/namotec_img/product/portable-laser.jpg",
-    laserSource: "ND:YAG",
-    wavelength: "1064 nm",
-    maxPower: "200 W",
-    energy: "200 Joule",
-    pulseWidth: "1 – 20 ms",
-    frequency: "1 – 50 Hz",
-    spotSize: "0.3 – 3 mm",
-    positioningAccuracy: "±0.02 mm",
-    cooling: "Air + Water Circulation",
-    application: [
-      "Gold & silver repair",
-      "Stone setting repair"
-    ]
-  },
 
   {
     id: "fiber-laser-cutting",
     name: "Motorized Enclosed Fiber Laser Cutting & Marking Machine",
-    category: "Laser Cutting & Welding Machines",
+    category: "Engraving & Welding Machines",
     image: "assets/images/namotec_img/product/enclosed_laser_cutting_machine.jpg",
     laserPower: "50W / 100W",
     laserSource: "Raycus",
@@ -195,89 +223,372 @@ const namotecProducts = [
       "Engraving & logo marking"
     ]
   },
+  
+  {
+    id: "portable-laser-welder",
+    name: "Portable Jewellery Laser Welding Machine",
+    category: "Engraving & Welding Machines",
+    image: "assets/images/namotec_img/product/portable-laser2.png",
+    laserSource: "ND:YAG",
+    wavelength: "1064 nm",
+    maxPower: "200 W",
+    energy: "200 Joule",
+    pulseWidth: "1 – 20 ms",
+    frequency: "1 – 50 Hz",
+    spotSize: "0.3 – 3 mm",
+    positioningAccuracy: "±0.02 mm",
+    cooling: "Air + Water Circulation",
+    application: [
+      "Gold & silver repair",
+      "Stone setting repair"
+    ]
+  },
 
+  
+  /* ================================
+     Electro Polishing Machines
+  ================================ */
+
+  {
+  id: "electro-polishing-machine",
+  name: "Electro Polishing Machine",
+  category: "Electro Polishing Machines",
+  image: "assets/images/namotec_img/product/electro-polishing.png",
+
+  machineType: "Electro Polishing Machine",
+  tankMaterial: "Leak-proof PP Tank",
+  tankCapacity: "20 Litres",
+
+  voltage: "25V",
+  currentCapacity: "25 Amp CCCV Rectifier",
+  polishingCompatibility: "Suitable for different jewellery ornaments",
+
+  controlSystem: "Interactive display with adjustable settings",
+  motorSystem: "High-capacity motorized movement",
+  performanceStandard: "Developed as per German Standards",
+
+  efficiencyImprovement: "Reduces Dhaga polish and manual polishing by approx. 85%",
+  chemicalCompatibility: "Uses same chemical for Silver and Gold jewellery",
+
+  buildQuality: "Sturdy industrial build",
+  maintenance: "Low maintenance design",
+
+  application: [
+    "Gold jewellery polishing",
+    "Silver jewellery polishing",
+    "Ornament finishing",
+    "Bulk jewellery surface treatment"
+  ]
+},
+
+  
+  /* ================================
+     Wax and Resins
+  ================================ */
+
+{
+  id: "castable-resin",
+  name: "DSN 100 Direct Castable Resin",
+  category: "Wax & Resins",
+  image: "assets/images/namotec_img/product/resine.png",
+
+  resinType: "Direct Castable Resin",
+  compatibleTechnology: "DLP / LCD / SLA 3D Printers",
+  availableColors: ["Yellow", "Green", "Purple"],
+
+  castingType: "Jewellery Investment Casting",
+  shrinkage: "Near Zero Shrinkage",
+  ashContent: "Low Ash Content for Clean Burnout",
+  surfaceFinish: "High Detail & Smooth Surface Output",
+
+  recommendedLayerThickness: "0.03 – 0.05 mm",
+  wavelengthCompatibility: "405 nm (Standard LCD/DLP Printers)",
+  curingType: "UV Light Curing",
+
+  bottleMaterial: "Opaque UV-Protected Bottle",
+  packagingSize: "1 kg Bottle",
+
+  application: [
+    "Gold jewellery casting",
+    "Silver jewellery casting",
+    "Ring patterns",
+    "Pendant and intricate ornament models"
+  ],
+
+  storageCondition: "Store in cool, dry place away from direct sunlight",
+  shelfLife: "12 Months (Unopened)"
+},
+
+{
+  id: "printing-wax",
+  name: "Industrial 3D Printing Wax",
+  category: "Wax & Resins",
+  image: "assets/images/namotec_img/product/wax.png",
+
+  materialType: "Castable Printing Wax",
+  compatibleTechnology: "MJP (Multi Jet Printing) Wax Printers",
+  availableColors: ["Blue", "Purple", "Green"],
+
+  packagingType: "Sealed Cartridge / Bottle",
+  packagingSize: "1.2 kg Cartridge",
+
+  meltingPoint: "Low Melting Point for Easy Burnout",
+  ashContent: "Zero Ash Content",
+  shrinkage: "Minimal Shrinkage",
+  surfaceFinish: "Ultra-Smooth Surface Finish",
+  detailAccuracy: "High Precision Micro-Detail Output",
+
+  application: [
+    "Jewellery master patterns",
+    "Investment casting",
+    "Ring and pendant models",
+    "Fine detailed ornaments"
+  ],
+
+  compatibility: "Suitable for Single-Head and Multi-Head MJP Machines",
+  storageCondition: "Store in cool, dry place below 30°C",
+  shelfLife: "24 Months (Unopened)"
+},
+
+/* ================================
+    Spare Parts 
+  ================================ */
+
+{
+  id: "spare-parts-kit",
+  name: "Spare Parts & Maintenance Kit",
+  category: "Spare Parts",
+  image: "assets/images/namotec_img/product/spare-parts.png",
+
+  compatibleMachines: "LCD / DLP / MJP 3D Printers",
+
+  includedComponents: [
+    "Cooling Fan (DC 12V, 0.5A)",
+    "Roller Kit Assembly",
+    "Industrial HDMI Data Cable",
+    "Control PCB Board Module",
+    "Sensor & Wiring Set",
+    "Pulley / Wheel Set",
+    "Mounting Hardware & Connectors"
+  ],
+
+  fanSpecification: "DC 12V, 0.5A Brushless Cooling Fan",
+  pcbType: "Main Control Board with Integrated Circuit Components",
+  cableType: "High-Speed Shielded HDMI Cable",
+  rollerMaterial: "Precision Aluminum Roller",
+  wiringType: "Pre-assembled Connector Cables",
+
+  installationType: "Direct Replacement / Plug & Play (Model Dependent)",
+  buildQuality: "Industrial Grade Components",
+  durability: "Long Service Life & Stable Performance",
+
+  application: [
+    "3D Printer Maintenance",
+    "Machine Repair & Replacement",
+    "Industrial Printer Servicing",
+    "Preventive Maintenance Kits"
+  ],
+
+  packaging: "Protective Anti-Static & Foam Packed Components",
+  warranty: "Limited Manufacturer Warranty (Model Dependent)"
+},
+
+
+/* ================================
+   Gemstone & Boxes
+  ================================ */
+
+{
+  id: "gemstones-collection",
+  name: "Gemstones Collection",
+  category: "Gemstones & Boxes",
+  image: "assets/images/namotec_img/product/gem-stones.png",
+  productType: "Natural & Lab-Cut Gemstones",
+  processing: "Rough Stone / Faceted / Cabochon Finish",
+  origin: "Ethically Sourced & Factory Cut",
+
+  availableTypes: [
+    "Amethyst",
+    "Emerald",
+    "Ruby",
+    "Sapphire",
+    "Topaz",
+    "Citrine",
+    "Garnet",
+    "Aquamarine",
+    "Tourmaline",
+    "Cubic Zirconia (Lab-Created)"
+  ],
+
+  availableCuts: [
+    "Round Cut",
+    "Oval Cut",
+    "Emerald Cut",
+    "Princess Cut",
+    "Marquise Cut",
+    "Pear Cut",
+    "Cushion Cut",
+    "Heart Cut",
+    "Cabochon"
+  ],
+
+  availableColors: [
+    "Purple",
+    "Green",
+    "Red",
+    "Blue",
+    "Yellow",
+    "Pink",
+    "White",
+    "Multicolor"
+  ],
+
+  clarityGrade: "AAA / AA (Depending on Stone Type)",
+  surfaceFinish: "High Polish & Precision Faceting",
+  treatmentType: "Natural / Heat Treated (Model Dependent)",
+
+  sizeRange: "2mm – 20mm (Custom Sizes Available)",
+  usage: [
+    "Jewellery Making",
+    "Gem Collectors",
+    "Custom Ring & Pendant Design",
+    "Wholesale Gem Supply",
+    "Lapidary & Cutting Services"
+  ],
+
+  packaging: "Secure Gem Pack / Bulk Wholesale Packaging",
+  availability: "Retail & Wholesale Orders Accepted"
+},
+
+{
+  id: "gem-display-boxes",
+  name: "Gem & Jewellery Display Boxes",
+  category: "Gemstones & Boxes",
+  image: "assets/images/namotec_img/product/box.png",
+
+  productType: "Luxury Gemstone & Ring Display Boxes",
+  materialOptions: [
+    "Natural Stone Finish (Malachite / Marble / Onyx Style)",
+    "Wood Finish",
+    "Metallic Finish (Gold / Silver)",
+    "Velvet & Leatherette",
+    "Glass Top Display Case"
+  ],
+
+  interiorMaterial: "Soft Velvet Cushion Insert",
+  availableShapes: [
+    "Square Box",
+    "Rectangle Box",
+    "Round Case",
+    "Transparent Display Frame",
+    "Cone Ring Display Stand",
+    "Watch Display Stand"
+  ],
+
+  colorOptions: [
+    "Black",
+    "Gold",
+    "Silver",
+    "Green",
+    "Blue",
+    "Pink",
+    "Wood Texture",
+    "Marble Texture"
+  ],
+
+  usage: [
+    "Gemstone Presentation",
+    "Ring Display",
+    "Jewellery Storage",
+    "Retail Counter Display",
+    "Wholesale Packaging",
+    "Gift Packaging"
+  ],
+
+  closureType: "Magnetic / Hinged Lid / Snap Lock",
+  finish: "Premium Gloss / Matte Finish",
+  customization: "Custom Logo Branding Available",
+
+  packaging: "Protective Box Packing for Safe Transport",
+  targetMarket: [
+    "Jewellers",
+    "Gem Collectors",
+    "Retail Jewellery Stores",
+    "Wholesale Gem Suppliers"
+  ]
+},
+
+
+
+
+
+  // {
+  //   id: "dlp-dm-series",
+  //   name: "DLP-DM200 / DLP-DM300 / DLP-DM400",
+  //   category: "3D & Wax Printing Machines",
+  //   image: "assets/images/namotec_img/product/DLP-series.png",
+  //   printingTechnology: "DLP",
+  //   printingSizes: [
+  //     "192 × 108 × 120 mm",
+  //     "288 × 162 × 300 mm",
+  //     "384 × 216 × 330 mm"
+  //   ],
+  //   xyResolution: ["50 µm", "75 µm", "100 µm"],
+  //   layerThickness: "0.03 – 0.15 mm",
+  //   lightSource: "4K 405nm",
+  //   software: "Voxel Dance Tango",
+  //   fileFormats: ["igs", "stl", "step"],
+  //   operatingSystem: "Zongheng Embedded System",
+  //   applications: [
+  //     "Mass jewellery production",
+  //     "High-speed casting models"
+  //   ]
+  // },
+
+  // {
+  //   id: "melt-m1-m3",
+  //   name: "Melt M1 & M3 Wax Printer",
+  //   category: "3D & Wax Printing Machines",
+  //   image: "assets/images/namotec_img/product/Melt-M1-M3.jpg",
+  //   printingTechnology: "Multi-Jet Wax Printing",
+  //   buildArea: "285 × 218 × 100 mm",
+  //   resolution: "1200 × 1200 × 1600 DPI",
+  //   layerHeight: "16 µm",
+  //   printerHead: "Xerox High Temperature Series",
+  //   printSpeed: "6.3 / 4.2 / 2.1 mm per hour",
+  //   dimensions: "1390 × 815 × 1500 mm",
+  //   connection: ["USB", "LAN"],
+  //   features: [
+  //     "Fully automatic system",
+  //     "Adaptive speed control",
+  //     "High density packing"
+  //   ],
+  //   application: [
+  //     "Gold & silver investment casting",
+  //     "Multi-material wax models"
+  //   ]
+  // },
+
+ 
   /* ================================
      CNC & FINISHING
   ================================ */
 
-  {
-    id: "cnc-engraving-4axis",
-    name: "4-Axis CNC Engraving Machine",
-    category: "CNC & Electropolishing Machines",
-    image: "assets/images/namotec_img/product/cnc.png",
-    workingArea: "150 × 80 mm",
-    spindlePower: "1 kW",
-    applications: [
-      "Jewellery engraving",
-      "Stone & gem cutting",
-      "MOP & glass engraving"
-    ]
-  },
+  // {
+  //   id: "cnc-engraving-4axis",
+  //   name: "4-Axis CNC Engraving Machine",
+  //   category: "CNC & Electropolishing Machines",
+  //   image: "assets/images/namotec_img/product/cnc.png",
+  //   workingArea: "150 × 80 mm",
+  //   spindlePower: "1 kW",
+  //   applications: [
+  //     "Jewellery engraving",
+  //     "Stone & gem cutting",
+  //     "MOP & glass engraving"
+  //   ]
+  // },
 
-  {
-    id: "electropolishing-machine",
-    name: "Electropolishing Machine (German Standard)",
-    category: "CNC & Electropolishing Machines",
-    image: "assets/images/namotec_img/product/gold-elephant2.jpg",
-    tankCapacity: "20 Litres",
-    rectifier: "25V / 25A CCCV",
-    application: [
-      "Gold jewellery polishing",
-      "Silver jewellery polishing"
-    ],
-    benefits: [
-      "85% reduction in manual polishing",
-      "Uniform surface finish"
-    ]
-  },
-
-  /* ================================
-     MATERIALS & ACCESSORIES
-  ================================ */
-
-  {
-  id: "materials-consumables",
-  name: "Resin, Wax, Spare Parts & AMC",
-  category: "Accessories & Materials",
-  image: "assets/images/namotec_img/product/resine.png",
-  description: "Complete range of consumables, spare parts, and maintenance services for jewellery and industrial 3D printing systems.",
-  includes: [
-    "All types of 3D printing resin",
-    "Jewellery casting wax",
-    "Original machine spare parts",
-    "Consumables for 3D & wax printers",
-    "1 Year Annual Maintenance Contract (AMC)"
-  ],
-  applications: [
-    "Jewellery manufacturing",
-    "3D printing machine maintenance",
-    "Wax casting workflows",
-    "Industrial equipment servicing"
-  ]
-},
-
-  {
-  id: "jewellery-gift-boxes",
-  name: "Jewellery Gift Boxes",
-  category: "Accessories & Materials",
-  image: "assets/images/namotec_img/product/box.png",
-  description: "Wide range of premium jewellery gift boxes designed for elegant presentation and secure storage.",
-  includes: [
-    "Ring boxes",
-    "Earring boxes",
-    "Necklace and pendant boxes",
-    "Bracelet boxes",
-    "Luxury wooden jewellery boxes",
-    "Leather-textured boxes",
-    "Velvet-finish jewellery boxes"
-  ],
-  applications: [
-    "Jewellery retail display",
-    "Gifting and packaging",
-    "Showroom presentation",
-    "Secure jewellery storage"
-  ]
-}
+  
 
 ];
 
