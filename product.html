@@ -23,6 +23,56 @@
   <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
+  <style>
+    .category-gallery {
+      margin-top: 60px;
+    }
+
+    .gallery-title {
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* Card Container */
+    .gallery-card {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      /* SAME HEIGHT FOR ALL */
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f5f5f5;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Make media fill card */
+    .gallery-card img,
+    .gallery-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Crop properly */
+      display: block;
+    }
+
+    .gallery-card video {
+      background: #000;
+    }
+  </style>
+
 </head>
 
 <body class="rs-smoother-yes rtl">
@@ -238,6 +288,12 @@
 
         <div class="filters" id="filters"></div>
         <div class="product-grid" id="productGrid"></div>
+
+        <!-- Gallery Section -->
+        <div id="categoryGallery" class="category-gallery" style="display:none;">
+          <h3 class="gallery-title"></h3>
+          <div class="gallery-grid"></div>
+        </div>
       </div>
     </section>
 
@@ -343,7 +399,7 @@
                       <div class="rs-footer-widget-email">
                         <span class="footer-text">UAE:</span> <a
                           href="mailto:namotecectrading@gmail.com">namotecectrading@gmail.com</a>
-                          <br>
+                        <br>
                         <span class="footer-text">India:</span>
                         <a href="mailto:dsnamotec@gmail.com">dsnamotec@gmail.com</a>
                       </div>
@@ -441,6 +497,7 @@
   <script src="assets/js/products.js"></script>
 
   <script>
+
     const products = namotecProducts;
     const grid = document.getElementById("productGrid");
 
@@ -505,10 +562,58 @@
             ? products
             : products.filter(p => p.category === category);
           renderProducts(filtered);
+          renderGallery(category);
         }
       });
     }
 
+    function renderGallery(category) {
+
+      const gallerySection = document.getElementById("categoryGallery");
+      const galleryGrid = gallerySection.querySelector(".gallery-grid");
+      const galleryTitle = gallerySection.querySelector(".gallery-title");
+
+      galleryGrid.innerHTML = "";
+
+      if (category === "All" || !categoryMedia[category]) {
+        gallerySection.style.display = "none";
+        return;
+      }
+
+      galleryTitle.innerText = category + " Gallery";
+
+      categoryMedia[category].forEach(item => {
+
+        const card = document.createElement("div");
+        card.classList.add("gallery-card");
+
+        if (item.type === "image") {
+          const img = document.createElement("img");
+          img.src = item.src;
+          img.loading = "lazy";
+          card.appendChild(img);
+        }
+
+        if (item.type === "video") {
+          const video = document.createElement("video");
+          video.src = item.src;
+          video.preload = "metadata";
+          video.muted = true;
+          video.playsInline = true;
+          video.controls = true;
+          card.appendChild(video);
+        }
+
+        galleryGrid.appendChild(card);
+      });
+
+      gallerySection.style.display = "block";
+
+      gsap.fromTo(".gallery-card",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }
+      );
+    }
 
     function formatValue(value) {
       // Array → bullet list
@@ -537,35 +642,35 @@
 
     /* ================= MODAL ================= */
     function openModal(product) {
-  document.body.classList.add("modal-open");
+      document.body.classList.add("modal-open");
 
-  modalImage.src = product.image;
-  modalName.innerText = product.name;
-  modalDesc.innerText =
-    product.description || "High-quality industrial jewellery equipment.";
+      modalImage.src = product.image;
+      modalName.innerText = product.name;
+      modalDesc.innerText =
+        product.description || "High-quality industrial jewellery equipment.";
 
-  const tbody = document.querySelector("#specTable tbody");
-  tbody.innerHTML = "";
+      const tbody = document.querySelector("#specTable tbody");
+      tbody.innerHTML = "";
 
-  Object.entries(product).forEach(([k, v]) => {
-    if (["id", "name", "image", "description"].includes(k)) return;
+      Object.entries(product).forEach(([k, v]) => {
+        if (["id", "name", "image", "description"].includes(k)) return;
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
       <td><strong>${formatKey(k)}</strong></td>
       <td>${formatValue(v)}</td>
     `;
-    tbody.appendChild(tr);
-  });
+        tbody.appendChild(tr);
+      });
 
-  productModal.style.display = "block";
-  productModal.classList.add("active");
+      productModal.style.display = "block";
+      productModal.classList.add("active");
 
-  gsap.fromTo(
-    ".modal-content",
-    { scale: 0.85, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
-  );
+      gsap.fromTo(
+        ".modal-content",
+        { scale: 0.85, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
+      );
 
       gsap.to("#specTable tr", { opacity: 1, x: 0, stagger: 0.05, duration: 0.4, delay: 0.2 });
       /* ================= WHATSAPP MESSAGE ================= */
