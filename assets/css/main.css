@@ -5872,7 +5872,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 120px;
   width: 100%;
   box-shadow: 7px 7px 40px -3px rgba(16.98, 11.979, 45.91, 0.05);
 }
@@ -5886,7 +5886,7 @@ code {
 }
 
 .rs-brand-one .rs-brand-thumb img {
-  width: 90px;
+  width: 120px;
   transition: all 0.5s ease;
 }
 
