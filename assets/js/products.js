@@ -199,6 +199,52 @@ const namotecProducts = [
     ]
   },
 
+  
+  {
+  id: "cnc-s30-engraving-machine",
+  name: "CNC Engraving Machine",
+  category: "CNC Machines",
+  image: "assets/images/namotec_img/product/cnc.png",
+  description: "High-precision four-axis CNC engraving machine designed for jewellery, stone, and micro-detail processing with advanced servo control and imported components.",
+
+  specifications: {
+    model: "S&S-30 Engraving Machine",
+    xyzTravel: "147 × 118 × 85 mm",
+    threeDimensionalProcessing: "80 × 110 mm",
+    reliefProcessingSize: "125 × 110 × 80 mm",
+    appearanceSize: "600 × 505 × 590 mm",
+    weight: "≈ 80 kg",
+    materialSupport: "Aluminum alloy",
+    engravingPrecision: "0.01 mm",
+    spindleSpeed: "0 – 24,000 rpm",
+    machiningSpeed: "0 – 3,000 mm/min",
+    spindlePower: "800W four-bearing water-cooled inverter spindle",
+    guideway: "Imported 20 square rail",
+    screwType: "Imported TBI screw",
+    driveType: "Mixed servo",
+    clampingToolShankDiameter: "2 / 3 / 4 / 6 mm",
+    ratedVoltage: "AC 220V / 50–60 Hz",
+    overallPower: "1.2 KW",
+    controlSystem: "Ly400 four-axis linkage CNC system"
+  },
+
+  applications: [
+    "Jewellery engraving",
+    "Gemstone engraving",
+    "Relief carving",
+    "Micro-detail precision machining"
+  ],
+
+  keyFeatures: [
+    "Four-axis linkage control",
+    "High engraving accuracy (0.01 mm)",
+    "Imported guide rails and screws",
+    "Water-cooled inverter spindle",
+    "Compact industrial design"
+  ]
+},
+
+
   /* ================================
      ENGRAVING & WELDING MACHINES
    ================================ */
@@ -244,6 +290,7 @@ const namotecProducts = [
     ]
   },
 
+  
   {
     id: "portable-laser-welder",
     name: "Desktop Laser Welding Machine",
@@ -263,51 +310,6 @@ const namotecProducts = [
       "Stone setting repair"
     ]
   },
-
-  {
-  id: "cnc-s30-engraving-machine",
-  name: "CNC Engraving Machine",
-  category: "Engraving & Welding Machines",
-  image: "assets/images/namotec_img/product/cnc.png",
-  description: "High-precision four-axis CNC engraving machine designed for jewellery, stone, and micro-detail processing with advanced servo control and imported components.",
-
-  specifications: {
-    model: "S&S-30 Engraving Machine",
-    xyzTravel: "147 × 118 × 85 mm",
-    threeDimensionalProcessing: "80 × 110 mm",
-    reliefProcessingSize: "125 × 110 × 80 mm",
-    appearanceSize: "600 × 505 × 590 mm",
-    weight: "≈ 80 kg",
-    materialSupport: "Aluminum alloy",
-    engravingPrecision: "0.01 mm",
-    spindleSpeed: "0 – 24,000 rpm",
-    machiningSpeed: "0 – 3,000 mm/min",
-    spindlePower: "800W four-bearing water-cooled inverter spindle",
-    guideway: "Imported 20 square rail",
-    screwType: "Imported TBI screw",
-    driveType: "Mixed servo",
-    clampingToolShankDiameter: "2 / 3 / 4 / 6 mm",
-    ratedVoltage: "AC 220V / 50–60 Hz",
-    overallPower: "1.2 KW",
-    controlSystem: "Ly400 four-axis linkage CNC system"
-  },
-
-  applications: [
-    "Jewellery engraving",
-    "Gemstone engraving",
-    "Relief carving",
-    "Micro-detail precision machining"
-  ],
-
-  keyFeatures: [
-    "Four-axis linkage control",
-    "High engraving accuracy (0.01 mm)",
-    "Imported guide rails and screws",
-    "Water-cooled inverter spindle",
-    "Compact industrial design"
-  ]
-},
-
 
 
   /* ================================
@@ -355,7 +357,7 @@ const namotecProducts = [
     id: "castable-resin",
     name: "DSN 100 Direct Castable Resin",
     category: "Wax & Resins",
-    image: "assets/images/namotec_img/product/resine.png",
+    image: "assets/images/namotec_img/product/resin.png",
 
     resinType: "Direct Castable Resin",
     compatibleTechnology: "DLP / LCD / SLA 3D Printers",
@@ -640,13 +642,18 @@ const categoryMedia = {
   ],
 
   "LCD Printers": [
-    { type: "video", src: "assets/images/namotec_img/gallery/Laser automation marking and cutting.mp4" }
+    { type: "video", src: "assets/images/namotec_img/gallery/laser1.mp4" }, 
+    { type: "video", src: "assets/images/namotec_img/gallery/laser3.mp4" },  
+    { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" }, 
+  ],
+
+  "CNC Machines": [
+    { type: "video", src: "assets/images/namotec_img/gallery/Cnc 4 axis.mp4" },    
   ],
 
   "Engraving & Welding Machines": [
-    { type: "image", src: "assets/images/namotec_img/product/portable-laser2.png" },
+    { type: "video", src: "assets/images/namotec_img/gallery/Laser automation marking and cutting.mp4" },
     { type: "video", src: "assets/images/namotec_img/gallery/Engraving & Welding Machine.mp4" },   
-    { type: "video", src: "assets/images/namotec_img/gallery/Cnc 4 axis.mp4" },    
     { type: "video", src: "assets/images/namotec_img/gallery/laser welding.mp4" },
   ],
 
