@@ -361,7 +361,7 @@ const namotecProducts = [
 
     resinType: "Direct Castable Resin",
     compatibleTechnology: "DLP / LCD / SLA 3D Printers",
-    availableColors: ["Yellow", "Green", "Purple"],
+    availableColors: ["Yellow", "Green", "Purple", "Red"],
 
     castingType: "Jewellery Investment Casting",
     shrinkage: "Near Zero Shrinkage",
@@ -394,7 +394,7 @@ const namotecProducts = [
 
     materialType: "Castable Printing Wax",
     compatibleTechnology: "MJP (Multi Jet Printing) Wax Printers",
-    availableColors: ["Blue", "Purple", "Green"],
+    availableColors: ["Blue", "Purple", "Red", "Pink"],
 
     packagingType: "Sealed Cartridge / Bottle",
     packagingSize: "1.2 kg Cartridge",
@@ -644,7 +644,9 @@ const categoryMedia = {
   "LCD Printers": [
     { type: "video", src: "assets/images/namotec_img/gallery/laser1.mp4" }, 
     { type: "video", src: "assets/images/namotec_img/gallery/laser3.mp4" },  
-    { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" }, 
+    { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" },   
+    { type: "video", src: "assets/images/namotec_img/gallery/laser4.mp4" },   
+    { type: "video", src: "assets/images/namotec_img/gallery/laser5.mp4" }, 
   ],
 
   "CNC Machines": [
@@ -667,7 +669,11 @@ const categoryMedia = {
     { type: "image", src: "assets/images/namotec_img/gallery/wax1.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax2.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax3.jpeg" },
-    { type: "image", src: "assets/images/namotec_img/gallery/wax4.jpeg" }
+    { type: "image", src: "assets/images/namotec_img/gallery/wax4.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin1.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin2.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin3.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin4.jpeg" },
   ],
 
   "Spare Parts": [

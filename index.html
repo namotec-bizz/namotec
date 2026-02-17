@@ -190,7 +190,7 @@
                                     </svg>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="mailto:namotecectrading@gmail.com">namotecectrading@gmail.com</a>
+                                    <a href="mailto:namotectrading@gmail.com">namotectrading@gmail.com</a>
                                 </div>
                             </li>
                         </ul>
@@ -1159,7 +1159,7 @@
                                         <span>Email</span>
                                         <h6>
                                             <strong class="footer-text">UAE:</strong> <br>
-                                            <a href="mailto:namotecectrading@gmail.com">namotecectrading@gmail.com</a>
+                                            <a href="mailto:namotectrading@gmail.com">namotectrading@gmail.com</a>
                                         </h6>
                                         <h6>
                                             <strong class="footer-text">India:</strong> <br>
@@ -1199,36 +1199,38 @@
                             <h3 class="rs-contact-form-title">Send Us a Message</h3>
                             <p class="descrip">Our team will get back to you within 24 hours.</p>
 
-                            <form id="contact-form" action="#" method="POST">
+                            <form id="contact-form">
                                 <div class="row g-4">
                                     <div class="col-md-12">
                                         <div class="rs-contact-input">
-                                            <input id="name" name="name" type="text" placeholder="Full Name">
+                                            <input id="name" name="name" type="text" placeholder="Full Name" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="rs-contact-input">
-                                            <input id="email" name="email" type="email" placeholder="Email Address">
+                                            <input id="email" name="email" type="email" placeholder="Email Address"
+                                                required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="rs-contact-input">
-                                            <input id="info" name="number" type="text" placeholder="Phone Numebr">
+                                            <input id="number" name="number" type="text" placeholder="Phone Number"
+                                                required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="rs-contact-input">
-                                            <textarea id="message" name="message"
-                                                placeholder="Write Your Message"></textarea>
+                                            <textarea id="message" name="message" placeholder="Write Your Message"
+                                                required></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="rs-contact-btn">
-                                            <button type="submit" class="rs-btn black-bg">Send Message</button>
+                                            <button type="submit" class="rs-btn black-bg">Connect with Us</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1310,7 +1312,7 @@
                                             <h5 class="rs-footer-widget-title">Email Address</h5>
                                             <div class="rs-footer-widget-email">
                                                 <span class="footer-text">UAE:</span> <a
-                                                    href="mailto:namotecectrading@gmail.com">namotectrading@gmail.com</a>
+                                                    href="mailto:namotectrading@gmail.com">namotectrading@gmail.com</a>
                                                 <br>
                                                 <span class="footer-text">India:</span>
                                                 <a href="mailto:dsnamotec@gmail.com">dsnamotec@gmail.com</a>
@@ -1408,6 +1410,29 @@
     <script src="assets/js/vendor/purecounter.js"></script>
     <script src="assets/js/vendor/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var message = document.getElementById("message").value;
+
+            var whatsappNumber = "+971506226558"; // <-- Replace with your number
+
+            var whatsappMessage =
+                "New Enquiry from Namotec:%0A%0A" + 
+                "Full Name: " + name + "%0A" +
+                "Email: " + email + "%0A" +
+                "Phone: " + number + "%0A" +
+                "Message: " + message;
+
+            var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage;
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
 </body>
 
 </html>
