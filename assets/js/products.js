@@ -17,7 +17,7 @@ const namotecProducts = [
     machineSize: "1415 × 790 × 1160 mm",
     netWeight: "380 kg",
     grossWeight: "500 kg",
-    software: "3D Sprint",
+    software: "WuKong",
     fileFormats: [".stl", ".slc"],
     materials: {
       buildMaterial: "3D Build Material (1.2 kg/bottle)",
@@ -199,50 +199,50 @@ const namotecProducts = [
     ]
   },
 
-  
+
   {
-  id: "cnc-s30-engraving-machine",
-  name: "CNC Engraving Machine",
-  category: "CNC Machines",
-  image: "assets/images/namotec_img/product/cnc.png",
-  description: "High-precision four-axis CNC engraving machine designed for jewellery, stone, and micro-detail processing with advanced servo control and imported components.",
+    id: "cnc-s30-engraving-machine",
+    name: "CNC Engraving Machine",
+    category: "CNC Machines",
+    image: "assets/images/namotec_img/product/cnc.png",
+    description: "High-precision four-axis CNC engraving machine designed for jewellery, stone, and micro-detail processing with advanced servo control and imported components.",
 
-  specifications: {
-    model: "S&S-30 Engraving Machine",
-    xyzTravel: "147 × 118 × 85 mm",
-    threeDimensionalProcessing: "80 × 110 mm",
-    reliefProcessingSize: "125 × 110 × 80 mm",
-    appearanceSize: "600 × 505 × 590 mm",
-    weight: "≈ 80 kg",
-    materialSupport: "Aluminum alloy",
-    engravingPrecision: "0.01 mm",
-    spindleSpeed: "0 – 24,000 rpm",
-    machiningSpeed: "0 – 3,000 mm/min",
-    spindlePower: "800W four-bearing water-cooled inverter spindle",
-    guideway: "Imported 20 square rail",
-    screwType: "Imported TBI screw",
-    driveType: "Mixed servo",
-    clampingToolShankDiameter: "2 / 3 / 4 / 6 mm",
-    ratedVoltage: "AC 220V / 50–60 Hz",
-    overallPower: "1.2 KW",
-    controlSystem: "Ly400 four-axis linkage CNC system"
+    specifications: {
+      model: "S&S-30 Engraving Machine",
+      xyzTravel: "147 × 118 × 85 mm",
+      threeDimensionalProcessing: "80 × 110 mm",
+      reliefProcessingSize: "125 × 110 × 80 mm",
+      appearanceSize: "600 × 505 × 590 mm",
+      weight: "≈ 80 kg",
+      materialSupport: "Aluminum alloy",
+      engravingPrecision: "0.01 mm",
+      spindleSpeed: "0 – 24,000 rpm",
+      machiningSpeed: "0 – 3,000 mm/min",
+      spindlePower: "800W four-bearing water-cooled inverter spindle",
+      guideway: "Imported 20 square rail",
+      screwType: "Imported TBI screw",
+      driveType: "Mixed servo",
+      clampingToolShankDiameter: "2 / 3 / 4 / 6 mm",
+      ratedVoltage: "AC 220V / 50–60 Hz",
+      overallPower: "1.2 KW",
+      controlSystem: "Ly400 four-axis linkage CNC system"
+    },
+
+    applications: [
+      "Jewellery engraving",
+      "Gemstone engraving",
+      "Relief carving",
+      "Micro-detail precision machining"
+    ],
+
+    keyFeatures: [
+      "Four-axis linkage control",
+      "High engraving accuracy (0.01 mm)",
+      "Imported guide rails and screws",
+      "Water-cooled inverter spindle",
+      "Compact industrial design"
+    ]
   },
-
-  applications: [
-    "Jewellery engraving",
-    "Gemstone engraving",
-    "Relief carving",
-    "Micro-detail precision machining"
-  ],
-
-  keyFeatures: [
-    "Four-axis linkage control",
-    "High engraving accuracy (0.01 mm)",
-    "Imported guide rails and screws",
-    "Water-cooled inverter spindle",
-    "Compact industrial design"
-  ]
-},
 
 
   /* ================================
@@ -272,7 +272,7 @@ const namotecProducts = [
 
   {
     id: "portable-laser-welder",
-    name: "Standlone Laser Welding Machine",
+    name: "Standlone Laser Weld / Solder Machine",
     category: "Engraving & Welding Machines",
     image: "assets/images/namotec_img/product/portable-laser2.png",
     laserSource: "ND:YAG",
@@ -290,10 +290,10 @@ const namotecProducts = [
     ]
   },
 
-  
+
   {
     id: "portable-laser-welder",
-    name: "Desktop Laser Welding Machine",
+    name: "Desktop Laser Weld / Solder Machine",
     category: "Engraving & Welding Machines",
     image: "assets/images/namotec_img/product/portable-laser.jpg",
     laserSource: "ND:YAG",
@@ -638,24 +638,26 @@ const categoryMedia = {
   "MJP Machines": [
     { type: "image", src: "assets/images/namotec_img/gallery/3d-print1.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/3d-print2.jpeg" },
-    { type: "video", src: "assets/images/namotec_img/gallery/3d printing.mp4" }
+    { type: "video", src: "assets/images/namotec_img/gallery/3d printing.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/laser4.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/laser5.mp4" },
   ],
 
   "LCD Printers": [
-    { type: "video", src: "assets/images/namotec_img/gallery/laser1.mp4" }, 
-    { type: "video", src: "assets/images/namotec_img/gallery/laser3.mp4" },  
-    { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" },   
-    { type: "video", src: "assets/images/namotec_img/gallery/laser4.mp4" },   
-    { type: "video", src: "assets/images/namotec_img/gallery/laser5.mp4" }, 
+    { type: "video", src: "assets/images/namotec_img/gallery/laser1.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/laser3.mp4" },
+    { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/printing-kit.jpeg" },
+
   ],
 
   "CNC Machines": [
-    { type: "video", src: "assets/images/namotec_img/gallery/Cnc 4 axis.mp4" },    
+    { type: "video", src: "assets/images/namotec_img/gallery/Cnc 4 axis.mp4" },
   ],
 
   "Engraving & Welding Machines": [
     { type: "video", src: "assets/images/namotec_img/gallery/Laser automation marking and cutting.mp4" },
-    { type: "video", src: "assets/images/namotec_img/gallery/Engraving & Welding Machine.mp4" },   
+    { type: "video", src: "assets/images/namotec_img/gallery/Engraving & Welding Machine.mp4" },
     { type: "video", src: "assets/images/namotec_img/gallery/laser welding.mp4" },
   ],
 
@@ -666,14 +668,14 @@ const categoryMedia = {
   ],
 
   "Wax & Resins": [
-    { type: "image", src: "assets/images/namotec_img/gallery/wax1.jpeg" },
+    { type: "video", src: "assets/images/namotec_img/gallery/resin5.mp4" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax2.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax3.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax4.jpeg" },
-    { type: "image", src: "assets/images/namotec_img/gallery/resin1.jpeg" },
-    { type: "image", src: "assets/images/namotec_img/gallery/resin2.jpeg" },
-    { type: "image", src: "assets/images/namotec_img/gallery/resin3.jpeg" },
-    { type: "image", src: "assets/images/namotec_img/gallery/resin4.jpeg" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin1.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin2.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin3.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/resin4.webp" },
   ],
 
   "Spare Parts": [
@@ -685,7 +687,26 @@ const categoryMedia = {
   ],
 
   "Gemstones & Boxes": [
-    { type: "image", src: "assets/images/namotec_img/product/gem-stones.png" },
-    { type: "image", src: "assets/images/namotec_img/product/box.png" }
+    { type: "image", src: "assets/images/namotec_img/gallery/gem2.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/gem3.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/gem4.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/gem5.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/gem6.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box2.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box3.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box4.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box5.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box6.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box7.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box8.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box9.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box10.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box11.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box12.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box13.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box14.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box15.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box16.webp" },
+    { type: "image", src: "assets/images/namotec_img/gallery/box17.webp" },
   ],
 };
