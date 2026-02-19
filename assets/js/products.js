@@ -707,6 +707,5 @@ const categoryMedia = {
     { type: "image", src: "assets/images/namotec_img/gallery/box14.webp" },
     { type: "image", src: "assets/images/namotec_img/gallery/box15.webp" },
     { type: "image", src: "assets/images/namotec_img/gallery/box16.webp" },
-    { type: "image", src: "assets/images/namotec_img/gallery/box17.webp" },
   ],
 };

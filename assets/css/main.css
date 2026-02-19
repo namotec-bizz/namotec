@@ -33443,11 +33443,20 @@ a.ui-button:active {
   right: 10px !important;
 }
 
+
 @media (min-width: 767px) {
   .rs-header-right {
     display: none !important;
   }
 }
+
+
+@media (min-width: 767px) and (max-width: 1024px) {
+   .rs-header-right {
+    display: flex !important;
+  }
+}
+
 
 @media (max-width: 767px) {
   .rs-subscribe-logo img {
@@ -33871,8 +33880,13 @@ body.modal-open {
   #specTable td {
     font-size: 14px;
   }
+
+  
 }
 
+.offcanvas-contact-text{
+    width: 300px !important;
+  }
 
 .rs-services-three .rs-services-thumb img {
   aspect-ratio: 159/100;
