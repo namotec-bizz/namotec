@@ -652,7 +652,8 @@ const categoryMedia = {
   ],
 
   "CNC Machines": [
-    { type: "video", src: "assets/images/namotec_img/gallery/Cnc 4 axis.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/cnc1.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/cnc2.mp4" },
   ],
 
   "Engraving & Welding Machines": [
@@ -668,6 +669,7 @@ const categoryMedia = {
   ],
 
   "Wax & Resins": [
+    { type: "video", src: "assets/images/namotec_img/gallery/resin.mp4" },
     { type: "video", src: "assets/images/namotec_img/gallery/resin5.mp4" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax2.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/wax3.jpeg" },
