@@ -641,6 +641,7 @@ const categoryMedia = {
     { type: "video", src: "assets/images/namotec_img/gallery/3d printing.mp4" },
     { type: "video", src: "assets/images/namotec_img/gallery/laser4.mp4" },
     { type: "video", src: "assets/images/namotec_img/gallery/laser5.mp4" },
+    { type: "video", src: "assets/images/namotec_img/gallery/mjp.mp4" },
   ],
 
   "LCD Printers": [
@@ -648,6 +649,7 @@ const categoryMedia = {
     { type: "video", src: "assets/images/namotec_img/gallery/laser3.mp4" },
     { type: "image", src: "assets/images/namotec_img/gallery/laser2.jpeg" },
     { type: "image", src: "assets/images/namotec_img/gallery/printing-kit.jpeg" },
+    { type: "video", src: "assets/images/namotec_img/gallery/lcd.mp4" },
 
   ],
 
